@@ -42,6 +42,7 @@ public class Config {
     public int scoreboardY = 0;
     public int scoreboardScale = 100;
     public int scoreboardOpacity = 100;
+    public boolean scoreboardHideScores = false;
     public ComponentSettings tablistSettings = new ComponentSettings(true, 20);
     public ComponentSettings vignetteSettings = new ComponentSettings(true, 5);
     public ComponentSettings crosshairSettings = new ComponentSettings(false, 20);
@@ -122,7 +123,7 @@ public class Config {
     }
 
     public boolean useCustomScoreboardLayout() {
-        return scoreboardCustomPosition || scoreboardScale != 100 || scoreboardOpacity != 100;
+        return scoreboardCustomPosition || scoreboardScale != 100 || scoreboardOpacity != 100 || scoreboardHideScores;
     }
 
     private static int clampChannel(int value) {

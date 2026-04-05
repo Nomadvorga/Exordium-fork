@@ -91,9 +91,11 @@ public class ExordiumConfigScreen extends CustomConfigScreen {
                     config.scoreboardScale = 100;
                     config.scoreboardOpacity = 100;
                     ExordiumModBase.instance.writeConfig();
-                    this.rebuildWidgets();
                 }).size(150, 20).build();
+        OptionInstance<Boolean> hideScores = getOnOffOption("text.exordium.setting.scoreboard.hidescores",
+                () -> ExordiumModBase.instance.config.scoreboardHideScores, (b) -> ExordiumModBase.instance.config.scoreboardHideScores = b);
         getOptions().addSmall(editButton, resetButton);
+        getOptions().addBig(hideScores);
     }
 
     private Component getSectionTitle(String name) {

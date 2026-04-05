@@ -11,6 +11,7 @@ import com.mojang.datafixers.util.Pair;
 
 import lombok.experimental.UtilityClass;
 import net.minecraft.client.Minecraft;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.scores.Objective;
 import net.minecraft.world.scores.PlayerTeam;
@@ -83,7 +84,7 @@ public class ScoreboardHelper {
             NumberFormat format = score.numberFormatOverride() == null ? objective.numberFormat()
                     : score.numberFormatOverride();
             list2.add(Pair.of(
-                    format == null ? Component.literal(Integer.toString(score.value())) : format.format(score.value()),
+                    format == null ? Component.literal(Integer.toString(score.value())).withStyle(ChatFormatting.RED) : format.format(score.value()),
                     component2));
 
         }

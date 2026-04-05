@@ -61,6 +61,8 @@
     "text.exordium.setting.scoreboard.forceupdates.tooltip": "Force the scoreboard to update every possible update frame(keeping in mind the fps limit). Might fix some issues with other mods.",
     "text.exordium.setting.scoreboard.editor.open": "Edit Scoreboard",
     "text.exordium.setting.scoreboard.editor.reset": "Reset Scoreboard",
+    "text.exordium.setting.scoreboard.hidescores": "Hide Score Numbers",
+    "text.exordium.setting.scoreboard.hidescores.tooltip": "Hide the score numbers on the right side of the scoreboard.",
     "text.exordium.setting.tablist.enabled": "Buffer Tablist",
     "text.exordium.setting.tablist.fps": "Buffer Tablist Max. FPS",
     "text.exordium.setting.tablist.fps.tooltip": "The maximum framerate for the tablist",

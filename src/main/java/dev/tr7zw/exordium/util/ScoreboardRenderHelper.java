@@ -58,15 +58,18 @@ public final class ScoreboardRenderHelper {
         guiGraphics.drawCenteredString(font, state.title(), layout.baseWidth() / 2, y + 1, layout.textColor());
         y += ROW_HEIGHT;
 
+        boolean hideScores = config.scoreboardHideScores;
         int rowY = y;
         for (Pair<Component, Component> entry : state.entries()) {
             Component score = entry.getFirst();
             Component name = entry.getSecond();
             guiGraphics.fill(0, rowY, layout.baseWidth(), rowY + ROW_HEIGHT, layout.rowBackgroundColor());
             guiGraphics.drawString(font, name, HORIZONTAL_PADDING, rowY + 1, layout.textColor(), false);
-            int scoreWidth = font.width(score);
-            int scoreX = layout.baseWidth() - HORIZONTAL_PADDING - scoreWidth;
-            guiGraphics.drawString(font, score, scoreX, rowY + 1, layout.textColor(), false);
+            if (!hideScores && score != null) {
+                int scoreWidth = font.width(score);
+                int scoreX = layout.baseWidth() - HORIZONTAL_PADDING - scoreWidth;
+                guiGraphics.drawString(font, score, scoreX, rowY + 1, layout.textColor(), false);
+            }
             rowY += ROW_HEIGHT;
         }
 
@@ -82,7 +85,7 @@ public final class ScoreboardRenderHelper {
         int contentWidth = font.width(state.title());
         for (Pair<Component, Component> entry : state.entries()) {
             int lineWidth = font.width(entry.getSecond());
-            if (entry.getFirst() != null) {
+            if (entry.getFirst() != null && !config.scoreboardHideScores) {
                 lineWidth += 2 + font.width(entry.getFirst());
             }
             contentWidth = Math.max(contentWidth, lineWidth);
