@@ -1,0 +1,27 @@
+{
+    "required": true,
+    "minVersion": "0.8",
+    "package": "dev.tr7zw.exordium.mixin",
+    "compatibilityLevel": "JAVA_16",
+    "mixins": [],
+    "client": [
+        "CrosshairMixin",
+        "FramerateLimitTrackerMixin",
+        "GameRendererMixin",
+        "GuiDebugOverlayMixin",
+        "GuiExperienceMixin",
+        "GuiHealthMixin",
+        "GuiHotbarMixin",
+        "GuiMixin",
+        "MinecraftMixin",
+        "RenderSystemMixin",
+        "ScoreboardMixin",
+        "TextHighlightMixin",
+        "VignetteMixin",
+        "accessor.GuiGraphicsAccessor",
+        "accessor.GuiRendererAccessor"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}
