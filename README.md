@@ -2,7 +2,7 @@
 
 # Exordium (Fork)
 
-> Fork of [tr7zw/Exordium](https://github.com/tr7zw/Exordium) with additional scoreboard customization features.
+> Fork of [tr7zw/Exordium](https://github.com/tr7zw/Exordium) with additional customization features.
 
 __Render the HUD and screens at a lower framerate to speed up what's really important: the worldrendering.__
 
